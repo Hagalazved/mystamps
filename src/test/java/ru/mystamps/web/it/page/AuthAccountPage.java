@@ -1,5 +1,9 @@
 /*
+<<<<<<< 5a3f7f18c4f46b20c6341c1fd131c5710bfda333
  * Copyright (C) 2009-2016 Slava Semushin <slava.semushin@gmail.com>
+=======
+ * Copyright (C) 2009-2015 Slava Semushin <slava.semushin@gmail.com>
+>>>>>>> WhenUserAtIndexPage: port to Cucumber.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,11 +23,17 @@ package ru.mystamps.web.it.page;
 
 import org.apache.commons.lang3.Validate;
 
+<<<<<<< 5a3f7f18c4f46b20c6341c1fd131c5710bfda333
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+=======
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+>>>>>>> WhenUserAtIndexPage: port to Cucumber.
 
 import lombok.RequiredArgsConstructor;
 
@@ -34,9 +44,12 @@ public class AuthAccountPage {
 	
 	private final WebDriver driver;
 	
+<<<<<<< 5a3f7f18c4f46b20c6341c1fd131c5710bfda333
 	@FindBy(id = "sign-out-btn")
 	private WebElement signOutButton;
 	
+=======
+>>>>>>> WhenUserAtIndexPage: port to Cucumber.
 	@FindBy(id = "login")
 	private WebElement loginField;
 	
@@ -46,11 +59,15 @@ public class AuthAccountPage {
 	@FindBy(id = "sign-in-btn")
 	private WebElement signInButton;
 	
+<<<<<<< 5a3f7f18c4f46b20c6341c1fd131c5710bfda333
 	@FindBy(id = "info-msg")
 	private WebElement infoMessage;
 	
 	public void open() {
 		PageFactory.initElements(driver, this);
+=======
+	public void open() {
+>>>>>>> WhenUserAtIndexPage: port to Cucumber.
 		driver.navigate().to(Url.SITE + Url.AUTHENTICATION_PAGE);
 	}
 	
@@ -62,6 +79,7 @@ public class AuthAccountPage {
 		ensureCurrentPageUrl(Url.SITE + Url.INDEX_PAGE);
 	}
 	
+<<<<<<< 5a3f7f18c4f46b20c6341c1fd131c5710bfda333
 	public void logout() {
 		signOutButton.submit();
 	}
@@ -74,6 +92,8 @@ public class AuthAccountPage {
 		}
 	}
 	
+=======
+>>>>>>> WhenUserAtIndexPage: port to Cucumber.
 	private void ensureCurrentPageUrl(String expectedUrl) {
 		String currentUrl = driver.getCurrentUrl();
 		Validate.validState(
