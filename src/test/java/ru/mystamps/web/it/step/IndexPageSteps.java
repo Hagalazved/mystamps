@@ -77,11 +77,14 @@ public class IndexPageSteps {
 		assertThat(page.getNavigationLinks(), hasItem(tr("t_add_series")));
 	}
 	
+<<<<<<< 52a5f5acc11f3a09ea0051b87bcbff2e8f915144
 <<<<<<< 5a3f7f18c4f46b20c6341c1fd131c5710bfda333
 	@And("^I see link for adding categories$")
 	public void shouldSeeLinkForAddingCategories() {
 		assertThat(page.getNavigationLinks(), hasItem(tr("t_create_category")));
 =======
+=======
+>>>>>>> WhenUserAtIndexPage: port to Cucumber.
 	@But("^I don't see link for adding series$")
 	public void shouldNotSeeLinkForAddingSeries() {
 		assertThat(page.getNavigationLinks(), not(hasItem(tr("t_add_series"))));

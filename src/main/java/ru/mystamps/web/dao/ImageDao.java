@@ -19,7 +19,37 @@ package ru.mystamps.web.dao;
 
 import org.springframework.data.repository.CrudRepository;
 
+<<<<<<< 52a5f5acc11f3a09ea0051b87bcbff2e8f915144:src/main/java/ru/mystamps/web/dao/ImageDao.java
 import ru.mystamps.web.entity.Image;
 
 public interface ImageDao extends CrudRepository<Image, Integer> {
+=======
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import ru.mystamps.web.it.page.AuthAccountPage;
+import ru.mystamps.web.tests.WebDriverFactory;
+
+public class CommonSteps {
+	
+	private final AuthAccountPage page;
+	
+	public CommonSteps() {
+		WebDriver driver = WebDriverFactory.getDriver();
+		page = PageFactory.initElements(driver, AuthAccountPage.class);
+	}
+	@Given("^As anonymous user$")
+	public void becomeAnonymousUser() {
+		// TODO: do logout if we're already authenticated
+	}
+	
+	@Given("^As authenticated user$")
+	public void becomeAuthenticatedUser() {
+		page.open();
+		// TODO: check message and do nothing if we're already authenticated
+		// TODO: get login/password from spring context
+		page.loginAs("coder", "test");
+	}
+	
+>>>>>>> WhenUserAtIndexPage: port to Cucumber.:src/test/java/ru/mystamps/web/it/step/CommonSteps.java
 }

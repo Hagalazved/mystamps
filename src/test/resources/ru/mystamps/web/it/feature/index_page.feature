@@ -46,5 +46,8 @@ Feature: User on index page
         And I see link for adding series
         But I don't see link for adding categories
         But I don't see link for adding countries
+<<<<<<< 52a5f5acc11f3a09ea0051b87bcbff2e8f915144
+>>>>>>> WhenUserAtIndexPage: port to Cucumber.
+=======
 >>>>>>> WhenUserAtIndexPage: port to Cucumber.
 
