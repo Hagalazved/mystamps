@@ -145,4 +145,7 @@ Feature: User creates country
           And I submit create country form
          Then I open create series page
           And Field "Country" in create series form contains "Germany"
+<<<<<<< 87b61e445484a58e4e8512286ba09eac4117849d
+>>>>>>> WhenAdminAddCountry.countryShouldBeAvailableForChoosingAtPageWithSeries: port to Cucumber.
+=======
 >>>>>>> WhenAdminAddCountry.countryShouldBeAvailableForChoosingAtPageWithSeries: port to Cucumber.
