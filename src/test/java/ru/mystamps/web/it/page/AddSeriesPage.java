@@ -19,10 +19,14 @@ package ru.mystamps.web.it.page;
 
 import java.util.List;
 
+<<<<<<< d8a26123126cc85ff1012ea0bd1d1098f028b0db
 import org.apache.commons.lang3.StringUtils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+=======
+import org.openqa.selenium.By;
+>>>>>>> WhenAdminAddCountry.countryShouldBeAvailableForChoosingAtPageWithSeries: port to Cucumber.
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -54,6 +58,7 @@ public class AddSeriesPage {
 	@FindBy(id = "category")
 	private WebElement categoryField;
 	
+<<<<<<< d8a26123126cc85ff1012ea0bd1d1098f028b0db
 	@FindBy(id = "category.errors")
 	private WebElement categoryErrorMessage;
 	
@@ -135,6 +140,11 @@ public class AddSeriesPage {
 	@FindBy(id = "add-series-btn")
 	private WebElement addSeriesButton;
 	
+=======
+	@FindBy(className = "selectize-input")
+	private List<WebElement> selectizedFields;
+	
+>>>>>>> WhenAdminAddCountry.countryShouldBeAvailableForChoosingAtPageWithSeries: port to Cucumber.
 	public void open() {
 		PageFactory.initElements(driver, this);
 		driver.navigate().to(Url.SITE + Url.ADD_SERIES_PAGE);
@@ -191,12 +201,15 @@ public class AddSeriesPage {
 			.collect(toList());
 	}
 	
+<<<<<<< d8a26123126cc85ff1012ea0bd1d1098f028b0db
 	// TODO: move to helper or parent
 	private static void clearAndTypeIntoField(WebElement element, String value) {
 		element.clear();
 		element.sendKeys(value);
 	}
 	
+=======
+>>>>>>> WhenAdminAddCountry.countryShouldBeAvailableForChoosingAtPageWithSeries: port to Cucumber.
 	private List<String> getCountryFieldValues() {
 		WebElement countryField = selectizedFields.get(0);
 		
