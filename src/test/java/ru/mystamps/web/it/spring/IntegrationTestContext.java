@@ -76,5 +76,10 @@ public class IntegrationTestContext {
 	public InfoCountryPage getInfoCountryPage() {
 		return new InfoCountryPage(getWebDriver());
 	}
+
+	@Bean
+	public RegisterAccountPage getRegisterAccountPage() {
+		return new RegisterAccountPage(getWebDriver());
+	}
 	
 }
